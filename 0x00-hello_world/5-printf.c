@@ -1,7 +1,8 @@
 #include <stdio.h>
-/*
- * main : prints a phrase with the new line
- * return : 0 (only if existed correctly)
+/**
+ * main - prints a phrase with the new line
+ * and this is it
+ * Return: 0 (only if existed correctly)
  *
  */
 int main(void)
