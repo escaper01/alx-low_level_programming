@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * jack_bauer - shuf desc
+ * jack_bauer - shuf descr
  * Description: prints every min of the day
  * Return: void
  */
