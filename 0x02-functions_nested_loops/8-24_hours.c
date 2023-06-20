@@ -13,7 +13,6 @@ void jack_bauer(void)
 	hours_ = '0';
 
 	while (hours_ < '3')
-
 		{
 			if (hours_ == '2')
 			{
