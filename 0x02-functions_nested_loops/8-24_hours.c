@@ -1,47 +1,45 @@
 #include "main.h"
-
 /**
  * jack_bauer - shuf desc
  * Description: prints every min of the day
  * Return: void
  */
-
 void jack_bauer(void)
 {
-	int hours_tens, hours_ones, minutes_tens, minutes_ones, hours_max;
+    int hours_, hours_1, minutes_, minutes_1, hours_m;
 
-	hours_max = 58;
-	hours_tens = '0';
-	while (hours_tens < '3')
-	{
-		if (hours_tens == '2')
-		{
-			hours_max = '4';
-		:wq}
-						            hours_ones = '0';
-							            while (hours_ones < hours_max)
-									            {
-											                minutes_tens = '0';
-													            while (minutes_tens < '6')
-															                {
-																		                minutes_ones = '0';
-																				                while (minutes_ones < 58)
-																							                {
-																										                    _putchar(hours_tens);
-																												                        _putchar(hours_ones);
-																															                    _putchar(':');
-																																	                        _putchar(minutes_tens);
-																																				                    _putchar(minutes_ones);
-																																						                        _putchar('\n');
-																																									                    minutes_ones++;
-																																											                    }
-																						                minutes_ones = '0';
-																								                minutes_tens++;
-																										            }
-														                minutes_tens = '0';
-																            hours_ones++;
-																	            }
-								            hours_ones = '0';
-									            hours_tens++;
-										        }
+    hours_m = 58;
+    hours_ = '0';
+    while (hours_ < '3')
+    {
+        if (hours_ == '2')
+        {
+            hours_m = '4';
+        }
+        hours_1 = '0';
+        while (hours_1 < hours_m)
+        {
+            minutes_ = '0';
+            while (minutes_ < '6')
+            {
+                minutes_1 = '0';
+                while (minutes_1 < 58)
+                {
+                    _putchar(hours_);
+                    _putchar(hours_1);
+                    _putchar(':');
+                    _putchar(minutes_);
+                    _putchar(minutes_1);
+                    _putchar('\n');
+                    minutes_1++;
+                }
+                minutes_1 = '0';
+                minutes_++;
+            }
+            minutes_ = '0';
+            hours_1++;
+        }
+        hours_1 = '0';
+        hours_++;
+    }
 }
