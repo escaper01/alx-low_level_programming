@@ -19,7 +19,10 @@ void jack_bauer(void)
 			hours_m = '4';
 		}
 		hours_1 = '0';
+<<<<<<< HEAD
 			
+=======
+>>>>>>> 8ba690aa52fcbf08365727a296613f1184dd6ca2
 		while (hours_1 < hours_m)
 		{
 			minutes_ = '0';
