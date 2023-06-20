@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * main - shuf desc
+  * print_alphabet - shuf desc
   * Description: alphabet printer 97 -> 122
   * Return: just void
   */
