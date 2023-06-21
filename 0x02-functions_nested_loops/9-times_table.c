@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * times_table - shuf desc
+ * times_table - shuf descr
  * Description: printi 9 times table
  * Return: void
  */

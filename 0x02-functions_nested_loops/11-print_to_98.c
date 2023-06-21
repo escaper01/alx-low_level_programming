@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_to_98 - shuf desc
+ * print_to_98 - shuf descr
  * @n: starting integer
  * Description: print every natural number from n to 98
  * Return: void
