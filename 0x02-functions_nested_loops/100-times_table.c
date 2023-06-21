@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
   * print_times_table - shuf desc
   * @n: n time
@@ -9,30 +8,42 @@
   */
 void print_times_table(int n)
 {
-	int i, j;
-	int num = 0;
+	int i, j, res;
 
-	if ((n < 0) || (n > 15))
+	if (!(n > 15 || n < 0))
 	{
-		return;
-	}
-
-	for (i = 0; i <= n; i++)
-	{
-		for (j = 0; j <= n; j++)
+		for (i = 0; i <= n; i++)
 		{
-			num += i;
-			if ((i == 0) || (j == 0))
+			for (j = 0; j <= n; j++)
 			{
-				num = 0;
+				res = (i * j);
+				if (j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				if (res < 10 && j != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((res % 10) + '0');
+				}
+				else if (res >= 10 && res < 100)
+				{
+					_putchar(' ');
+					_putchar((res / 10) + '0');
+					_putchar((res % 10) + '0');
+				}
+				else if (res >= 100 && j != 0)
+				{
+					_putchar((res / 100) + '0');
+					_putchar((res / 10) % 10 + '0');
+					_putchar((res % 10) + '0');
+				}
+				else
+					_putchar((res % 10) + '0');
 			}
-			printf("%d", num);
-			if (j < n)
-			{
-				printf(",   ");
-			}
+			_putchar('\n');
 		}
-		printf("\n");
 	}
-
 }
