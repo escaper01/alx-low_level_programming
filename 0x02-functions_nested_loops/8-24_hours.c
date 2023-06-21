@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - shuf descri
+ * jack_bauer - shuf descrip
  * Description: prints every min of the day
  * Return: void
  */
