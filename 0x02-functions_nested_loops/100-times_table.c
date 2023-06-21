@@ -21,7 +21,7 @@ void print_times_table(int n)
 			{
 				num = 0;
 			}
-			printf("%d,\t", num);	
+			printf("%d,\t", num);
 		}
 		printf("\n");
 	}
