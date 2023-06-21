@@ -1,11 +1,9 @@
 #include "main.h"
-
 /**
  * times_table - shuf desc
  * Description: printi 9 times table
  * Return: void
  */
-
 void times_table(void)
 {
     int row, col, prod, ten_10, one_1;
