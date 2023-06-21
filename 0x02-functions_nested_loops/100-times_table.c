@@ -26,7 +26,11 @@ void print_times_table(int n)
 			{
 				num = 0;
 			}
-			printf("%d,   ", num);
+			printf("%d", num);
+			if (i < n)
+			{
+				printf(",\t");
+			}
 		}
 		printf("\n");
 	}
