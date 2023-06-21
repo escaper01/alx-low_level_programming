@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * jack_bauer - shuf descri
  * Description: prints every min of the day
@@ -6,43 +7,18 @@
  */
 void jack_bauer(void)
 {
-	int hours_, hours_1, minutes_, minutes_1, hours_m;
+	int h, m;
 
-	hours_m = 58;
-
-	hours_ = '0';
-
-	while (hours_ < '3')
+	for (h = 0; h < 24; h++)
+	{
+		for (m = 0; m < 60; m++)
 		{
-			if (hours_ == '2')
-			{
-				hours_m = '4';
-			}
-			hours_1 = '0';
-			while (hours_1 < hours_m)
-			{
-				minutes_ = '0';
-
-				while (minutes_ < '6')
-				{
-					minutes_1 = '0';
-					while (minutes_1 < 58)
-					{
-						_putchar(hours_);
-						_putchar(hours_1);
-						_putchar(':');
-						_putchar(minutes_);
-						_putchar(minutes_1);
-						_putchar('\n');
-						minutes_1++;
-					}
-					minutes_1 = '0';
-					minutes_++;
-				}
-				minutes_ = '0';
-				hours_1++;
-			}
-			hours_1 = '0';
-			hours_++;
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
 		}
+	}
 }
