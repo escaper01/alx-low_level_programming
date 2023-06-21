@@ -26,7 +26,6 @@ void jack_bauer(void)
 				while (minutes_ < '6')
 				{
 					minutes_1 = '0';
-
 					while (minutes_1 < 58)
 					{
 						_putchar(hours_);
