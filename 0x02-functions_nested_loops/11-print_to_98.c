@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - shuf desc
+ * print_to_98 - shuf descr
  * @n: the start num to 98
  * Return: void
  */
