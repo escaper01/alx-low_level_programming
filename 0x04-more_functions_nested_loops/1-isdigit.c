@@ -3,7 +3,7 @@
 /**
  * _isdigit - shuf desc
  * Description: check if its a digit
- * @n: digit to check
+ * @c: digit to check
  * Return: 1 or 0
  */
 
