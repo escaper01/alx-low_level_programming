@@ -6,7 +6,6 @@
  * Description: checker for uppercase
  * Return: 1 or 0
 */
-
 int _isupper(int c)
 {
 	return (c <= 90);
