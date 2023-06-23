@@ -6,21 +6,24 @@
  * DEscription: shuf tani lfuq
  * Return: void
  */
-
 void print_square(int size)
 {
-	int i, j;
+	int row;
+	int col;
 
-	if (size <= 0)
-		_putchar('\n');
-
-	for (i = 0; i < size; i++)
+	if (size > 0)
 	{
-		for (j = 0; j < (size); j++)
+		for (row = 0; row < size; row++)
 		{
-			_putchar('#');
+			for (col = 0; col < size; col++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
+	}
+	else
+	{
 		_putchar('\n');
 	}
-
 }
