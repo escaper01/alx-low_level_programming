@@ -10,15 +10,16 @@
 
 char *_strdup(char *str)
 {
+	int cur = 0;
+	char *str_copy = malloc(sizeof(str));
+
 	if (!str)
 		return (NULL);
 
-	char *str_copy = malloc(sizeof(str));
 
 	if (!str_copy)
 		return (NULL);
 
-	int cur = 0;
 
 	while (str[cur])
 	{
