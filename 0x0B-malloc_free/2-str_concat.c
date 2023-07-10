@@ -11,50 +11,38 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int g, l = 0;
-	char *str_copy;
+	char *res;
+	int i = 0, j = 0, m, k = 0;
 
-	while (s1[l])
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	while (s1[i])
 	{
-		g++;
+		i++;
 	}
-
-	l = 0;
-
-	while (s2[l])
+	while (s2[j])
 	{
-		g++;
+		j++;
 	}
-	str_copy= malloc(sizeof(char) * (g + 1));
+	k = i + j + 1;
+	res = malloc(k * sizeof(char));
 
-	l,g = 0;
-
-	if (!str_copy)
+	if (res == NULL)
 		return (NULL);
 
-
-	if (s1)
+	for (m = 0; m < i; m++)
 	{
-		while (s1[l])
-		{
-			str_copy[g] = s1[l];
-			g++;
-			l++;
-		}
+		res[m] = s1[m];
 	}
 
-	l = 0;
-
-	if (s2)
+	for (m = 0; m <= j; m++)
 	{
-		while (s2[l])
-		{
-			str_copy[g] = s2[l];
-			g++;
-			l++;
-		}
+		res[m + i] = s2[m];
 	}
 
-	return (str_copy);
-
+	return (res);
 }
