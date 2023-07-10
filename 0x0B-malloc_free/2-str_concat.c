@@ -11,6 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	int g, l = 0;
 	int c = 0;
 	char *str_copy;
 
@@ -25,8 +26,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	str_copy= malloc(sizeof(char) * (c + 1));
 
-	// char *s = malloc(sizeof(s1) + sizeof(s2));
-	int g, l = 0;
 
 	if (!str_copy)
 		return (NULL);
