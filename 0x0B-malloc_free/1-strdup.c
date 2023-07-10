@@ -11,7 +11,12 @@
 char *_strdup(char *str)
 {
 	int cur = 0;
-	char *str_copy = malloc(sizeof(str));
+	int c = 0;
+	while (str[c])
+	{
+		c++;
+	}
+	char *str_copy = malloc(sizeof(char) * (c + 1));
 
 	if (!str)
 		return (NULL);
