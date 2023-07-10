@@ -18,10 +18,11 @@ char *_strdup(char *str)
 	{
 		c++;
 	}
-	str_copy = malloc(sizeof(char) * (c + 1));
 
 	if (!str)
 		return (NULL);
+	str_copy = malloc(sizeof(char) * (c + 1));
+
 
 
 	if (!str_copy)
