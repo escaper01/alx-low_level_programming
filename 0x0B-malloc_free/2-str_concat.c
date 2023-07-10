@@ -12,23 +12,23 @@
 char *str_concat(char *s1, char *s2)
 {
 	int c = 0;
+	char *str_copy;
+
 	while (s1[c])
 	{
 		c++;
 	}
-	char *str_copy = malloc(sizeof(char) * (c + 1));
 
-	int n = 0;
 	while (s2[c])
 	{
-		n++;
+		c++;
 	}
-	char *str_copy = malloc(sizeof(char) * (n + 1));
+	str_copy= malloc(sizeof(char) * (c + 1));
 
 	// char *s = malloc(sizeof(s1) + sizeof(s2));
 	int g, l = 0;
 
-	if (!s)
+	if (!str_copy)
 		return (NULL);
 
 
@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (s1[l])
 		{
-			s[g] = s1[l];
+			str_copy[g] = s1[l];
 			g++;
 			l++;
 		}
@@ -48,12 +48,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (s2[l])
 		{
-			s[g] = s2[l];
+			str_copy[g] = s2[l];
 			g++;
 			l++;
 		}
 	}
 
-	return (s);
+	return (str_copy);
 
 }
