@@ -12,7 +12,7 @@ char *_strdup(char *str)
 {
 	int cur = 0;
 	int c = 0;
-	while (str[c])
+	while (str[c] != '\n')
 	{
 		c++;
 	}
