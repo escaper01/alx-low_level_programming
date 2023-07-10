@@ -17,15 +17,10 @@ char *create_array(unsigned int size, char c)
 
 	if (!arr)
 		return (NULL);
-	size--;
 
-	unsigned int a = -1;
-
-	while (size != a)
-		{
-		arr[size] = c;
-		size--;
-		}
+	int i;
+	for (i = 0; i < size; i++)
+		arr[i] = c;
 
 	return (arr);
 }
