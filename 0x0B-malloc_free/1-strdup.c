@@ -14,13 +14,14 @@ char *_strdup(char *str)
 	int c = 0;
 	char *str_copy;
 
+	if (!str)
+		return (NULL);
+
 	while (str[c])
 	{
 		c++;
 	}
 
-	if (!str)
-		return (NULL);
 	str_copy = malloc(sizeof(char) * (c + 1));
 
 
