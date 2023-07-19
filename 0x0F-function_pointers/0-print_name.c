@@ -7,7 +7,8 @@
   * @name: name
   * @f: func ptr that prints str
   * Description: call f to print a name
-  */
+  * Return: void 
+ */
 
 void print_name(char *name, void (*f)(char *))
 {
