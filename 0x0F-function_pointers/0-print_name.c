@@ -1,6 +1,6 @@
 #include "function_pointers.h"
 /**
-  * print_name - name printer
+  * print_name - name printer in here
   * @name: name
   * @f: func ptr that prints str
   * Description: call f to print a name
