@@ -4,9 +4,9 @@
  *@array: arr
  *@size: arr size
  *@action: func
-* Description: shuf lfuq
-* Return: void
-*/
+ * Description: shuf lfuq
+ * Return: void
+ */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
@@ -14,8 +14,8 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	if (array && size && action)
 	{
 		for (i = 0; i < size; i++)
-			{
-				action(*(array + i));
-			}
+		{
+			action(*(array + i));
+		}
 	}
 }

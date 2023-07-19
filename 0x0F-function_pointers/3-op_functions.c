@@ -26,7 +26,9 @@ int op_sub(int a, int b)
  * @a: num a
  * @b: num b
 * Description: shuf desc
-* Return: result of muliply*/
+* Return: result of muliply
+*/
+
 int op_mul(int a, int b)
 {
 	return (a * b);
@@ -36,11 +38,16 @@ int op_mul(int a, int b)
  * @a: num a
  * @b: num b
 * Description: sef desc
-* Return: result of divide */
+* Return: result of divide
+*/
+
 int op_div(int a, int b)
 {
 	if (b != 0)
+	{
 		return (a / b);
+	}
+
 	printf("Error\n");
 	exit(100);
 }
@@ -51,6 +58,7 @@ int op_div(int a, int b)
 * Description: shuf desc
 * Return: result of module
 */
+
 int op_mod(int a, int b)
 {
 	if (b == 0)
