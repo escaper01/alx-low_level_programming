@@ -28,5 +28,5 @@ int sum_them_all(const unsigned int n, ...)
 		sum += current_num;
 	}
 	va_end(pargs);
-	return(sum);
+	return (sum);
 }
