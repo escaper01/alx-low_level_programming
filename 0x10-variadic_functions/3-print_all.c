@@ -8,46 +8,44 @@
  * Description: shuf lfuq
  * Return: void
  */
-
 void print_all(const char * const format, ...)
 {
-	va_list pargs;
-	int i;
+	va_list valist;
+	int n = 0, i = 0;
 	char *sep = ", ";
+	char *str;
 
-	int str_len = 0;
-	char *current_elem;
+	va_start(valist, format);
 
-	va_start(pargs, format);
+	while (format && format[i])
+		i++;
 
-	while (format && format[str_len])
-		str_len++;
-	for (i = 0; i < str_len; i++)
+	while (format && format[n])
 	{
-		if (i + 1 == str_len)
-			sep = "";
-		switch (format[i])
+		if (n  == (i - 1))
 		{
-			case 'c':
-				printf("%c%s", va_arg(pargs, int), sep);
-				break;
-			case 'i':
-				printf("%d%s", va_arg(pargs, int), sep);
-				break;
-			case 'f':
-				printf("%f%s", va_arg(pargs, double), sep);
-				break;
-			case 's':
-				current_elem = va_arg(pargs, char*);
-				if (current_elem)
-					printf("%s%s", current_elem, sep);
-				else
-					printf("(nil)");
-				break;
-			default:
-				break;
+			sep = "";
 		}
+		switch (format[n])
+		{
+		case 'c':
+			printf("%c%s", va_arg(valist, int), sep);
+			break;
+		case 'i':
+			printf("%d%s", va_arg(valist, int), sep);
+			break;
+		case 'f':
+			printf("%f%s", va_arg(valist, double), sep);
+			break;
+		case 's':
+			str = va_arg(valist, char *);
+			if (str == NULL)
+				str = "(nil)";
+			printf("%s%s", str, sep);
+			break;
+		}
+		n++;
 	}
-
 	printf("\n");
+	va_end(valist);
 }
