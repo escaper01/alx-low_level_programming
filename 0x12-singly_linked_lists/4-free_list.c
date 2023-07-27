@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdlib.h>
 /**
  * free_list - free up memory allocations of linked lists
  *@head: ptr of linked list header
