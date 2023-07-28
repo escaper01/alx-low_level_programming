@@ -9,14 +9,13 @@
 
 size_t list_len(const list_t *h)
 {
-	const list_t *cursor;
 	unsigned int i = 0;
 
-	cursor = h;
-	while (cursor)
+	while (h != NULL)
 	{
+		h = h->next;
 		i++;
-		cursor = cursor->next;
 	}
+
 	return (i);
 }
