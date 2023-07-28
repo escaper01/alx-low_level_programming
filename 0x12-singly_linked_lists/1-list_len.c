@@ -1,5 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stddef.h>
+
 
 /**
  * list_len - get num of items
