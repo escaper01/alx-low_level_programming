@@ -8,7 +8,6 @@
  *@str: str of the added node
  *Return: ptr of linked list
 */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
 
