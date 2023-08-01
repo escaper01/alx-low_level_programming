@@ -4,35 +4,39 @@
 
 /**
  * insert_nodeint_at_index - insert node at a particular place
+ *@head: node'S head
  *@idx: index
  *@n: new node 's data
  * Return: inserted node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *cursor = *head;
-	listint_t *prev_node = NULL;
-	listint_t *new_node;
-	unsigned int counter = 0;
+	listint_t *new, *copy = *head;
+	unsigned int node;
 
-	while (cursor != NULL)
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+
+	if (idx == 0)
 	{
-
-		if (idx == counter)
-		{
-			new_node = malloc(sizeof(listint_t));
-			if (new_node == NULL)
-			{
-				return (NULL);
-			}
-			prev_node->next = new_node;
-			new_node->next = cursor;
-			new_node->n = n;
-		}
-		counter++;
-		prev_node = cursor;
-		cursor = cursor->next;
+		new->next = copy;
+		*head = new;
+		return (new);
 	}
 
-	return (NULL);
+	for (node = 0; node < (idx - 1); node++)
+	{
+		if (copy == NULL || copy->next == NULL)
+			return (NULL);
+
+		copy = copy->next;
+	}
+
+	new->next = copy->next;
+	copy->next = new;
+
+	return (new);
 }
