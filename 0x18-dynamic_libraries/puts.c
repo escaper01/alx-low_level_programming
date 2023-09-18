@@ -1,11 +1,17 @@
 #include <stdio.h>
+
 /**
- * main - prints a phrase
- * Return: 0 (only if existed correctly)
- *
+ * _puts - prints string
+ * @str: input string
+ * Return: no return
  */
-int main(char *s)
+
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
 }
