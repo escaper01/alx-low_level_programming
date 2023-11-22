@@ -10,7 +10,7 @@ all : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean :
-	$(RM) ~/tmp ~/.emacs $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean :
 	$(RM) $(OBJ)
