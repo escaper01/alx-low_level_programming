@@ -7,10 +7,10 @@ RM = rm -f
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean:
+clean :
 	$(RM) ~/tmp ~/.emacs $(NAME)
 
-oclean:
+oclean :
 	$(RM) $(OBJ)
 
 fclean : clean oclean
